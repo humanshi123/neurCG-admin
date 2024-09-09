@@ -1,101 +1,90 @@
-import Image from "next/image";
+"use client"
+import IncomeGraph from "@/components/IncomeGraph";
+import UserCards from "@/components/UserCards";
+import UsersGraph from "@/components/UsersGraph";
+import React from "react";
+import thumbimg1 from "@/assets/images/video1.png"
+import thumbimg2 from "@/assets/images/video2.png"
+import thumbimg3 from "@/assets/images/video3.png"
+import thumbimg4 from "@/assets/images/video4.png"
+import NewUserCard from "@/components/NewUserCard";
+
 
 export default function Home() {
+  const useCardData =[
+    {
+      id: 1,
+      text: "New User",
+      value: 360,
+    },
+    {
+      id: 2,
+      text: "Normal User",
+      value: 2500,
+    },
+    {
+      id: 3,
+      text: "Premium User",
+      value: 1560,
+    },
+    {
+      id: 4,
+      text: "Total User",
+      value: 4060,
+    },
+  ]
+  const UserData =[
+    {
+      id:1,
+      title: "Lorem Ipsum Dummy Title",
+      thumbnail: thumbimg1,
+    },
+    {
+      id:2,
+      title: "Lorem Ipsum Dummy Title",
+      thumbnail: thumbimg2,
+    },
+    {
+      id:3,
+      title: "Lorem Ipsum Dummy Title",
+      thumbnail: thumbimg3
+    },
+    {
+      id:4,
+      title: "Lorem Ipsum Dummy Title",
+      thumbnail: thumbimg4
+    },
+  ]
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
+  <div>
+   <div className="grid md:grid-cols-[minmax(0,_5fr)_minmax(0,_7fr)] gap-5 ">
+   <IncomeGraph />
+   <UsersGraph />
+   </div>
+   <section className="my-10">
+   <div className="grid grid-cols-4 gap-5">
+    {useCardData.map((data)=>(
+      <UserCards 
+      key={data.id}
+      value={data.value}
+      text={data.text}
+      />
+    ))}
+   
+   </div>
+   </section>
+<section>
+  <div className="grid grid-cols-4">
+  {UserData.map((data) =>(
+            <NewUserCard
+            key= {data.id}
+            title={data.title}
+            thumbnail={data.thumbnail}
             />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+        ))}
+  </div>
+</section>
+
+  </div>
   );
 }
