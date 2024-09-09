@@ -99,7 +99,7 @@ ul.navList li a span {
 }
 
 .overflo-custom::-webkit-scrollbar {
-  width: 6px;
+  width: 0px;
   background-color: #283c63;
   height: 6px;
 }

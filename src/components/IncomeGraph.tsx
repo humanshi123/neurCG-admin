@@ -24,7 +24,17 @@ const IncomeGraph: React.FC = () => {
       <h3 className='text-sm  '>Income this month</h3>
       <ResponsiveContainer width="100%" height={170}>
         <LineChart data={data}>
-          <XAxis dataKey="name" tick={{ fill: 'white' }} />
+          <XAxis 
+            dataKey="name"
+            tick={{ fill: 'white', fontSize: 12 }}   
+            interval={0}                             
+            axisLine={false}                         
+            tickLine={false}                         
+            minTickGap={0}                           
+            //angle={-30}                             
+            dy={10}
+            padding={{ left: 10, right: 10 }} 
+          />
           <CartesianGrid strokeDasharray="0 3" />
           <Line type ="monotone" dataKey="value" stroke="white" strokeWidth={4} dot={false} />
         </LineChart>

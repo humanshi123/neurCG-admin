@@ -36,23 +36,28 @@ export default function Home() {
   const UserData =[
     {
       id:1,
-      title: "Lorem Ipsum Dummy Title",
+      title: "Marisa Love",
       thumbnail: thumbimg1,
     },
     {
       id:2,
-      title: "Lorem Ipsum Dummy Title",
+      title: "Lara Jean",
       thumbnail: thumbimg2,
     },
     {
       id:3,
-      title: "Lorem Ipsum Dummy Title",
+      title: "John Aster",
       thumbnail: thumbimg3
     },
     {
       id:4,
-      title: "Lorem Ipsum Dummy Title",
+      title: "Larry Page",
       thumbnail: thumbimg4
+    },
+    {
+      id:5,
+      title: "Larry Page",
+      thumbnail: thumbimg2
     },
   ]
   return (
@@ -62,7 +67,7 @@ export default function Home() {
    <UsersGraph />
    </div>
    <section className="my-10">
-   <div className="grid grid-cols-4 gap-5">
+   <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-5">
     {useCardData.map((data)=>(
       <UserCards 
       key={data.id}
@@ -74,7 +79,8 @@ export default function Home() {
    </div>
    </section>
 <section>
-  <div className="grid grid-cols-4">
+  <h2 className="section-title mb-5">New Users</h2>
+  <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-5">
   {UserData.map((data) =>(
             <NewUserCard
             key= {data.id}

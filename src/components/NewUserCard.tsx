@@ -23,7 +23,7 @@ const NewUserCard: React.FC<VideoCardProps> = ({ title, thumbnail }) => {
             />
           }
           <div className="mt-[15px] mb-[11px] flex items-center gap-[10px] px-[14px]">
-            <h3 className="text-[#3A2C23] text-sm leading-[normal] ">
+            <h3 className="text-[#3A2C23] font-medium text-sm leading-[normal] ">
               {title}
             </h3>
           </div>
