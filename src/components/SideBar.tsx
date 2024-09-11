@@ -48,27 +48,21 @@ const SideBar = ({ isOpen, toggleSidebar }: SideBarProps) => {
                 <span>Home</span>
               </Link>
             </li>
-            <li className={isActive('/my-projects')}>
-              <Link href="/my-projects"  onClick={handleLinkClick}>
+            <li className={isActive('/users')}>
+              <Link href="/users"  onClick={handleLinkClick}>
                 <ProfileIcon />
                 <span>Users</span>
               </Link>
             </li>
             {/* <p className="text-[#818999] text-[10px] font-medium mt-5 mb-[2px] pl-5">SERVICES</p> */}
-            <li className={isActive('/text-photo')}>
-              <Link href="/text-photo"  onClick={handleLinkClick}>
+            <li className={isActive('/income')}>
+              <Link href="/income"  onClick={handleLinkClick}>
                 <IncomeIcon />
                 <span>Income</span>
               </Link>
             </li>
           </ul>
         </div>
-       <div className=" block lg:hidden my-5 px-5">
-       <h3 className="bg-[#FFEEE2] font-[500] text-xs text-[#3A2C23] border border-[#FFE2CE] px-6 py-[9px] rounded-full">
-            Credits left
-            <span className="text-[#E87223] ml-[10px]">148</span>
-          </h3>
-       </div>
         <div className="md:my-[50px] my-5 mx-[30px]">
           <button className="w-full px-5 h-[50px] py-[10px] text-[#e87223] text-base font-medium bg-white rounded-lg border border-[#e87223]">
             UPGRADE PLAN

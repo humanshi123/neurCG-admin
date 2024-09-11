@@ -10,7 +10,7 @@ const data = [
   { name: 'May', value: 2181 },
   { name: 'Jun', value: 2500 },
   { name: 'Jul', value: 500 },
-  { name: 'Aug', value: 2450 },
+  { name: 'Aug', value: 2450 }, 
   { name: 'Sep', value: 1500 },
   { name: 'Oct', value: 0 },
   { name: 'Nov', value: 2600 },
@@ -20,12 +20,12 @@ const data = [
 const IncomeGraph: React.FC = () => {
   return (
     <Card sx={{ p: 2, backgroundColor: '#E87223', color: 'white', borderRadius: '10px', boxShadow: '0' }}>
-      <h2 className='text-[36px] font-[700] mb-1 leading-[normal] '>$3,448</h2>
+      <h2 className='text-2xl md:text-[36px] font-[700] mb-1 leading-[normal] '>$3,448</h2>
       <h3 className='text-sm  '>Income this month</h3>
       <ResponsiveContainer width="100%" height={170}>
         <LineChart data={data}>
           <XAxis 
-            dataKey="name"
+            dataKey="name" 
             tick={{ fill: 'white', fontSize: 12 }}   
             interval={0}                             
             axisLine={false}                         

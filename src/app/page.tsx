@@ -66,8 +66,8 @@ export default function Home() {
    <IncomeGraph />
    <UsersGraph />
    </div>
-   <section className="my-10">
-   <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-5">
+   <section className="my-5 md:my-10">
+   <div className="grid  md:grid-cols-2 lg:grid-cols-4 gap-3 md:gap-5">
     {useCardData.map((data)=>(
       <UserCards 
       key={data.id}
