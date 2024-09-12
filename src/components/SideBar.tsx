@@ -63,11 +63,7 @@ const SideBar = ({ isOpen, toggleSidebar }: SideBarProps) => {
             </li>
           </ul>
         </div>
-        <div className="md:my-[50px] my-5 mx-[30px]">
-          <button className="w-full px-5 h-[50px] py-[10px] text-[#e87223] text-base font-medium bg-white rounded-lg border border-[#e87223]">
-            UPGRADE PLAN
-          </button>
-        </div>
+       
       </div>
 
       {isOpen && (
